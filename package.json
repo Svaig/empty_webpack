@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "npx webpack serve"
+    "dev-server": "npx webpack serve"
   },
   "keywords": [],
   "author": "",
