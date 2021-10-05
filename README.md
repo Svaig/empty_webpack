@@ -1,1 +1,1 @@
-# Empty Webpack template for fast start
+# Empty Webpack config for fast start
