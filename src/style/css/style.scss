@@ -1,0 +1,13 @@
+$color: red;
+
+@font-face {
+  font-family: 'Myfont';
+  src: url("../fonts/Lobster-Regular.ttf") format('truetype');
+}
+
+.hello {
+  font-family: Myfont, serif;
+  font-size: 30px;
+  color: $color;
+  background: url("../img/bg2.jpg");
+}
