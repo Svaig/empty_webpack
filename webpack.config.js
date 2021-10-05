@@ -9,7 +9,7 @@ module.exports = {
     mode: "development",
     output: {
         path: distPath,
-        filename: 'resources/scripts/[name].bundle.js',
+        filename: 'resources/scripts/[name].bundle.js?[hash:5]',
         publicPath: '/',
         clean: true,
     },
@@ -30,12 +30,6 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     {loader: MiniCssExtractPlugin.loader},
-                    /*{
-                        loader: 'style-loader',
-                        options: {
-                            injectType: "linkTag"
-                        }
-                    },*/
                     {
                         loader: 'css-loader',
                         options: {
@@ -52,14 +46,14 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/i,
                 type: "asset/resource",
                 generator: {
-                    filename: 'resources/img/[name][ext]?[hash]'
+                    filename: 'resources/img/[name][ext]?[hash:5]'
                 }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: "asset/resource",
                 generator: {
-                    filename: 'resources/fonts/[name][ext]?[hash]'
+                    filename: 'resources/fonts/[name][ext]?[hash:5]'
                 }
             }
         ]
@@ -69,7 +63,7 @@ module.exports = {
             title: "Webpack App"
         }),
         new MiniCssExtractPlugin({
-            filename: 'resources/css/[name].css?[hash]'
+            filename: 'resources/css/[name].css?[hash:5]'
         }),
     ],
 };

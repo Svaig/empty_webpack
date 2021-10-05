@@ -5,7 +5,6 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "watch": "webpack --watch --config webpack.config.js",
     "start": "npx webpack serve"
   },
   "keywords": [],
